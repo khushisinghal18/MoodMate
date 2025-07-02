@@ -62,28 +62,27 @@ export default function Recommendations() {
 
   return (
     <div className="relative min-h-screen overflow-hidden">
-      {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{ backgroundImage: "url('/rf-bg.png')" }}
       ></div>
 
-      <div className="relative z-10 p-6">
-        <div className="max-w-5xl mx-auto bg-white bg-opacity-90 rounded-xl shadow-lg p-8">
-          <h2 className="text-4xl font-bold text-center text-purple-800 mb-2 uppercase">
+      <div className="relative z-10 px-4 sm:px-8 py-6">
+        <div className="max-w-6xl mx-auto bg-white bg-opacity-90 rounded-xl shadow-lg p-6 sm:p-10">
+          <h2 className="text-2xl sm:text-4xl font-bold text-center text-purple-800 mb-6 uppercase">
             Your Mood: <span className="capitalize">{mood}</span> {moodEmojis[mood]}
           </h2>
 
-          {/* MUSIC */}
-          <h3 className="text-2xl font-semibold text-purple-700 text-center mt-6 mb-4">
+          {/* Music Section */}
+          <h3 className="text-xl sm:text-2xl font-semibold text-purple-700 text-center mb-4">
             🎵 Music Recommendations
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
             {musicLinks[mood].map((track, idx) => {
               const isSaved = savedMusicUrls.includes(track.url);
               return (
                 <div key={idx} className="bg-purple-100 p-4 rounded-xl text-center shadow">
-                  <h4 className="text-lg font-medium mb-2">{track.title}</h4>
+                  <h4 className="text-base sm:text-lg font-medium mb-2">{track.title}</h4>
                   <a
                     href={track.url}
                     target="_blank"
@@ -111,11 +110,11 @@ export default function Recommendations() {
             })}
           </div>
 
-          {/* FOOD */}
-          <h3 className="text-2xl font-semibold text-purple-700 text-center mb-4">
+          {/* Food Section */}
+          <h3 className="text-xl sm:text-2xl font-semibold text-green-700 text-center mb-4">
             🥗 Food Recommendations
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {recipes.length === 0 ? (
               <p className="text-center col-span-3 text-gray-500">Loading recipes...</p>
             ) : (
@@ -124,7 +123,7 @@ export default function Recommendations() {
                 const isSaved = savedFoodUrls.includes(recipeUrl);
                 return (
                   <div key={recipe.id} className="bg-green-100 p-4 rounded-xl text-center shadow">
-                    <h4 className="text-lg font-medium mb-2">{recipe.title}</h4>
+                    <h4 className="text-base sm:text-lg font-medium mb-2">{recipe.title}</h4>
                     {recipe.image && (
                       <img
                         src={recipe.image}
