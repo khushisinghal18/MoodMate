@@ -1,12 +1,70 @@
-# React + Vite
+# MoodMate 🎧🍽️
+**MoodMate** is a React-based web application that suggests food recipes and music based on your current mood. Whether you're feeling happy, sad, lazy, or focused — MoodMate personalizes suggestions to help uplift or balance your emotions.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+##  Features
+- 😄 Mood selection through emoji buttons or typed text
+- 🔍 Mood detection using keyword analysis
+- 🎲 "Surprise Me" random mood generator
+- 🥗 Recipe suggestions using the Spoonacular API
+- 🎵 Curated music playlists via YouTube links
+- ❤️ Save and manage favorite recipes & songs using LocalStorage
+- 📱 Fully responsive UI with Tailwind CSS
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧑‍💻 Tech Stack
 
-## Expanding the ESLint configuration
+| Tool         | Purpose                        |
+|--------------|--------------------------------|
+| React.js     | Frontend framework             |
+| Tailwind CSS | Styling and responsiveness     |
+| Spoonacular  | Recipe API integration         |
+| React Router | Page navigation                |
+| LocalStorage | Storing mood and favorite data |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+##  Folder Structure
+src/
+├── api/                 // Spoonacular API fetch logic
+├── components/          // Navbar and reusable UI
+├── pages/               // Home, Recommendations, Favorites, About
+├── App.jsx              // Route structure
+├── index.css            // Tailwind directives
+└── main.jsx             // App entry point
+
+
+
+##  How to Run Locally
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/yourusername/MoodMate.git
+   cd MoodMate
+````
+
+2. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+>  *Make sure to add your Spoonacular API key in* `src/api/spoonacular.js`
+
+
+##  Learnings
+This project was made while learning React, JavaScript, and Tailwind CSS from scratch. Key concepts implemented:
+* useState and useEffect hooks
+* Component-based structure
+* Routing with React Router
+* Responsive design with Tailwind
+* Working with third-party APIs (Spoonacular)
+* LocalStorage for persistence
+
+
+
+##  License
+This project is open for learning and demonstration purposes.
